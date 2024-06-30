@@ -1,13 +1,1 @@
-{
-  "pwd": "", 
-  "defoult_space": 100, 
-  "users": {
-    "name": [], 
-    "id": [], 
-    "root": [], 
-    "space": [], 
-    "max_space": [], 
-    "now_directory": [], 
-    "path": []
-  }
-}
+{"pwd": "C:\\Program Files\\Miki_project\\", "defoult_space": 100, "users": {"name": [], "id": [], "root": [], "space": [], "max_space": [], "now_directory": [], "path": []}}

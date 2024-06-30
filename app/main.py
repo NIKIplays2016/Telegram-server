@@ -5,11 +5,10 @@ from os import system, popen
 import os
 from config import token
 
-with open("data/base.json", "r") as file:
+with open(r"data\base.json", "r") as file:
     base = json.load(file)
     base['pwd'] = base["pwd"].replace("/", "\\")
 print(base)
-print(token)
 bot = telebot.TeleBot(token)
 
 
@@ -35,7 +34,7 @@ def registrate(message_json, message):
 def save():
     global base
     base['pwd'] = base['pwd'].replace("\\", "/")
-    with open("data/base.json", "w") as file:
+    with open(r"data\base.json", "w") as file:
         json.dump(base, file)
 
 
