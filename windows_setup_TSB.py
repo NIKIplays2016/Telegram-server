@@ -9,7 +9,7 @@ from os import system, popen
 import os
 from config import token
 
-with open("data/base.json", "r") as file:
+with open(r"data\base.json", "r") as file:
     base = json.load(file)
     base['pwd'] = base["pwd"].replace("/", "\\")
 print(base)
@@ -38,7 +38,7 @@ def registrate(message_json, message):
 def save():
     global base
     base['pwd'] = base['pwd'].replace("\\", "/")
-    with open("data/base.json", "w") as file:
+    with open(r"data\base.json", "w") as file:
         json.dump(base, file)
 
 
@@ -89,7 +89,7 @@ def handle_start(message):
     # Загрузка файлов
     bool_action[3] = True
     index = take_id(message)
-    bot.reply_to(message, f"Скиньте файлы в следующем смс. \n\nПримечания\n-не более 4гб \n\nЧтобы выключить режим загрузки введите \stop \n\nПримечание: фото лучше скидывать документом\n\nТекущая директория: {base['users']['path'][index]} \n\n Оставшееся пространство: {int(base['users']['space'][index]/1000000)} мб ")
+    bot.reply_to(message, f"Скиньте файлы в следующем смс. \n\nПримечания\n-не более 4гб \n\nЧтобы выключить режим загрузки введите \\stop \n\nПримечание: фото лучше скидывать документом\n\nТекущая директория: {base['users']['path'][index]} \n\n Оставшееся пространство: {int(base['users']['space'][index]/1000000)} мб ")
 
 @bot.message_handler(commands=['command5'])
 def handle_start(message):
