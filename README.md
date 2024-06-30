@@ -48,6 +48,12 @@ Telegram Server Bot (TSB)
 
 <br>
 
+##### P.S.
+    Этот проект был заброшен +- 04.2024. Возможно в будующем будут обновления и версия для linux
+
+
+<br>
+
 ---
 
 <br>
@@ -70,7 +76,10 @@ Telegram Server Bot (TSB)
 
         1.3 После того как ввели имя нашего бота, BotFather пришлет нам сообщение:
 
+
 ![alt text](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/take_token.png?raw=true)
+<br>
+
         Токен обведенный красным прямоугольником в будущем нам понадобиться, поэтому его лучше куда-нибудь записать.
 
         1.4 Следующую команду следуюет написать команду /setcommands, после чего нужно будет ввести имя вашего бота
@@ -117,7 +126,7 @@ Telegram Server Bot (TSB)
  
    
     После Чего запускается программа установки:
-![setup.png]([images\setup.png](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/setup.png?raw=true))
+![setup.png](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/setup.png?raw=true)
     
     5. Заполняем все поля.
       В 1-м поле пишем токен бота, инструкция по его получению в п.2
@@ -146,7 +155,9 @@ Telegram Server Bot (TSB)
     7. Переходим в папку date и открываем файл base.json
     8. Вместо YOUR_PWD вставляем путь где лежит main.py, 
        вместо DEFOULT_SPACE пишем количество мегабайт которое будет выделяться каждому пользователю по умолчанию при регистрациии
->{
+
+```JSON
+{
   "pwd": "YOUR_PWD", 
   "defoult_space": DEFOULT_SPACE, 
   "users": {
@@ -159,6 +170,7 @@ Telegram Server Bot (TSB)
     "path": []
   }
 }
+```
 
     9. Сохраняем изменения
 
@@ -191,7 +203,8 @@ Telegram Server Bot (TSB)
 
     Для того чтобы настоить бота нужно перейти в папку data и открыть файл base.json
 
->>{
+```JSON
+{
   "pwd": "YOUR_PWD", 
   "defoult_space": DEFOULT_SPACE, 
   "users": {
@@ -204,6 +217,7 @@ Telegram Server Bot (TSB)
     "path": []
   }
 }
+```
 
     1. "root": При выставлении true пользователь получает права Администратора (нужны для использования командной строки через бота)
     2. "max_space": Здесь можно поменять доступное количество места ня диске для пользователя (ВАЖНО: здесь обьем написан в байтах) 
