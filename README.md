@@ -70,8 +70,7 @@ Telegram Server Bot (TSB)
 
         1.3 После того как ввели имя нашего бота, BotFather пришлет нам сообщение:
 
-![alt text](<[images\take_token.png](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/take_token.png?raw=true)>)
-
+![alt text](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/take_token.png?raw=true)
         Токен обведенный красным прямоугольником в будущем нам понадобиться, поэтому его лучше куда-нибудь записать.
 
         1.4 Следующую команду следуюет написать команду /setcommands, после чего нужно будет ввести имя вашего бота
