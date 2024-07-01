@@ -122,7 +122,7 @@ Telegram Server Bot (TSB)
 
     3. Запускаем командную строку от имени администратора
 
-    4. пишем "python ПОЛНЫЙ_ПУТЬ_ДО_ФАЙЛА_windows_setup_TSB.py"
+    4. пишем "python ПОЛНЫЙ_ПУТЬ_ДО_ФАЙЛА\windows_setup_TSB.py"
  
    
     После Чего запускается программа установки:
@@ -146,6 +146,7 @@ Telegram Server Bot (TSB)
     2. Устанавливаем интерпритатор python 3.10 и выше
     3. Открываем командную строку и устанавливаем библиотеку telebot
 > pip install telebot
+
 
     4. в папке app находим и открываем config.py
     5. Вставляем токен бота (пункт 2) вместо YOUR_TOKEN_BOT
@@ -234,3 +235,42 @@ Telegram Server Bot (TSB)
 [bot_using]:+
 
 ### Взаимодействие с ботом
+
+#### Регистрация
+    Для регистрации нужно отправить боту любое сообщение, или же команду /start
+![registrate](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/bot_using_1_registrate.png?raw=true)
+    
+    После чего в data\base.json мы можем увидеть следующие изменения
+````json
+{
+   "pwd": "C:/Program Files/Miki_project/", 
+   "defoult_space": 100, 
+   "users": {
+      "name": ["Picard_off"], 
+      "id": [852663786], 
+      "root": [false], 
+      "space": [1023972838], 
+      "max_space": [1024000000], 
+      "now_directory": ["id"], 
+      "path": ["852663786/Mikita"]}
+}
+
+````
+    В ключе "users" заполнились поля с ншими данными
+    Теперь чтоб взять любые из наших данных следует обратится к словарю с нужным нам ключем и указать индекс пользователя
+
+<br>
+
+#### Меню
+
+    Представляет из себя 9 пунктов
+
+![registrate](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/bot_using_2_menu.png?raw=true)
+
+![registrate](https://github.com/NIKIplays2016/Telegram-server/blob/main/images/bot_using_3_menu.png?raw=true)
+
+<br>
+
+---
+
+<br>
