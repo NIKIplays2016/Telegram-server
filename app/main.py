@@ -25,9 +25,9 @@ def registrate(message_json, message):
     base["users"]["now_directory"].append("id")
 
     base["users"]["path"].append(f"{id}")
-    with open("data/base.json", "w") as file:
+    with open(r"data\base.json", "w") as file:
         json.dump(base, file)
-    with open("data/base.json", "r") as file:
+    with open(r"data\base.json", "r") as file:
         base = json.load(file)
     bot.reply_to(message, f"Вы успешно зарегестрировались, ваша директория: {id}")
 
@@ -85,7 +85,7 @@ def handle_start(message):
     # Загрузка файлов
     bool_action[3] = True
     index = take_id(message)
-    bot.reply_to(message, f"Скиньте файлы в следующем смс. \n\nПримечания\n-не более 4гб \n\nЧтобы выключить режим загрузки введите \stop \n\nПримечание: фото лучше скидывать документом\n\nТекущая директория: {base['users']['path'][index]} \n\n Оставшееся пространство: {int(base['users']['space'][index]/1000000)} мб ")
+    bot.reply_to(message, f"Скиньте файлы в следующем смс. \n\nПримечания\n-не более 4гб \n\nЧтобы выключить режим загрузки введите /stop \n\nПримечание: фото лучше скидывать документом\n\nТекущая директория: {base['users']['path'][index]} \n\n Оставшееся пространство: {int(base['users']['space'][index]/1000000)} мб ")
 
 @bot.message_handler(commands=['command5'])
 def handle_start(message):
